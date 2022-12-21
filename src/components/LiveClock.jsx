@@ -10,7 +10,7 @@ const LiveClock = () => {
     setInterval(updateTime, 1000);
 
     return (
-        <div className='text-white font-medium text-md'>
+        <div className='text-white font-medium text-md md:visible collapse'>
             <h3>{currentTime}</h3>
         </div>
     )

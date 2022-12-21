@@ -1,12 +1,33 @@
 import React from 'react'
-import { MapContainer, ImageOverlay, Marker, Popup,ZoomControl, AttributionControl } from 'react-leaflet'
+import { MapContainer, ImageOverlay, AttributionControl, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import {CRS} from 'leaflet';
 
+const ZoomButtonController = () => {
+    const map = useMap()
+    document.getElementById('btn-zoom-in-1').addEventListener('mouseup',function(){
+        map.zoomIn();
+    })
+    document.getElementById('btn-zoom-out-1').addEventListener('mouseup',function(){
+        map.zoomOut();
+    })
+    document.getElementById('btn-zoom-in-2').addEventListener('mouseup',function(){
+        map.zoomIn();
+    })
+    document.getElementById('btn-zoom-out-2').addEventListener('mouseup',function(){
+        map.zoomOut();
+    })
+    map.on('zoomend', function() {
+        document.getElementById("btn-zoom-level-1").innerHTML = map.getZoom() * 16 + "x";
+        document.getElementById("btn-zoom-level-2").innerHTML = map.getZoom() * 16 + "x";
+    });
+    return null;
+}
 
 const MapCanvas = () => {
     const bounds = [[-500,-500], [500,500]];
-    
+
+
     return (
         <MapContainer
         center={[0, 0]}
@@ -16,7 +37,7 @@ const MapCanvas = () => {
         maxBoundsViscosity={1.0}
         zoomControl={false}
         attributionControl={false}
-        className="w-full h-full bg-[#a0b2ca]"
+        className="w-full h-full bg-[#a0b2ca] z-0"
         crs={CRS.Simple} // This works
         >
             <ImageOverlay
@@ -29,24 +50,8 @@ const MapCanvas = () => {
             ></AttributionControl>
 
             {/* <ZoomControl position="bottomright"/> */}
+            <ZoomButtonController/>
 
-            <Marker position={[2,-3.5]}>
-                <Popup>
-                    Oconee Island Airport
-                </Popup>
-            </Marker>
-
-            <Marker position={[-5.8,3]}>
-                <Popup>
-                    Hampden Field Airport
-                </Popup>
-            </Marker>
-
-            <Marker position={[4,26]}>
-                <Popup>
-                    Clarence International Airport
-                </Popup>
-            </Marker>
         </MapContainer>
     );
 }
