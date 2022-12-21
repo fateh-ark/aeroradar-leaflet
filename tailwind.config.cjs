@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
+          '"Source Sans Pro"',
           '"Helvetica Neue"',
           'system-ui',
           '-apple-system',
