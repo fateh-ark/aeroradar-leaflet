@@ -6,7 +6,7 @@ import { faPlay, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
-        <nav className='h-16 bg-slate-900 flex items-center justify-between px-4 z-0'>
+        <nav className='h-16 bg-slate-900 flex items-center justify-between px-4 z-10'>
             <div className='flex items-center gap-2'>
                 <button id="burger-main-nav" className="text-white text-2xl hover:bg-slate-700 active:bg-slate-800 py-1 px-3 rounded lg:collapse visible">
                     <FontAwesomeIcon icon={faBars} />
