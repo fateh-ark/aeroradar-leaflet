@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { MainPage } from './routes'
+import { MainPage, MissingPage } from './routes'
 
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <>
       <Routes>
         <Route exact path='/' element={<MainPage />} />
+        <Route exact path='*' element={<MissingPage />} />
       </Routes>
     </>
   )

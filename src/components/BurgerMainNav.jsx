@@ -30,13 +30,13 @@ const BurgerMainNav = () => {
 
     return (
         <div id="collapsed-nav" className='absolute md:top-14 top-16 left-0 z-[1000] w-screen flex flex-col items-stretch text-white font-semibold lg:collapse invisible'>
+            <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>Live Map</a>
+            <hr className='border-slate-500'/>
             <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>Ground Control</a>
             <hr className='border-slate-500'/>
             <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>Database</a>
             <hr className='border-slate-500'/>
             <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>Support Us</a>
-            <hr className='border-slate-500'/>
-            <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>Socials</a>
             <hr className='border-slate-500'/>
             <a href="" className='py-4 md:text-lg md:px-4 px-6 text-2xl flex items-center bg-slate-900/75 hover:bg-slate-700/75 active:bg-slate-800/75'>About</a>
             <hr className='border-slate-500'/>
